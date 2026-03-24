@@ -3,24 +3,19 @@
   "type": "WebApp",
   "permissions": ["Extensions", "Hotkeys", "GameInfo", "FileSystem"],
   "meta": {
-    "name": "Generic Game Events Consumer Sample",
-    "version": "0.1.0",
+    "name": "Marvel Rivals Companion",
+    "version": "1.0.0",
     "minimum-overwolf-version": "0.220.0.1",
     "author": "Overwolf",
     "icon": "assets/icon.png",
     "icon_gray": "assets/icon_gray.png",
     "launcher_icon": "assets/desktop_icon.ico",
-    "description": "Game Events Consumer Sample"
+    "description": "Real-time game event tracking for Marvel Rivals"
   },
   "data": {
     "game_targeting": {
       "type": "dedicated",
-      "game_ids": [
-        765, 1136, 5426, 7212, 7314, 7764, 8032, 10798, 10826, 10906, 21216,
-        21566, 21570, 21626, 21634, 21640, 21848, 21854, 21864, 21960, 21876,
-        9898, 10624, 10902, 21308, 21816, 21668, 8954, 6365, 10746, 22092,
-        22250, 10844, 24890
-      ]
+      "game_ids": [24890]
     },
     "start_window": "index",
     "windows": {
@@ -36,37 +31,27 @@
         "open_dev_tools": true,
         "file": "windows/in-game/page.html",
         "focus_game_takeover": "ReleaseOnHidden",
-        "focus_game_takeover_release_hotkey": "ges_showhide",
+        "focus_game_takeover_release_hotkey": "rivals_showhide",
         "is_background_page": true,
         "native_window": true,
         "desktop_only": true,
         "dev_tools_window_style": false
       }
     },
-    "game_events": [
-      765, 5426, 7212, 7314, 7764, 8032, 10798, 10826, 10906, 21216, 21566,
-      21570, 21626, 21634, 21640, 21848, 21854, 21864, 21960, 21876, 9898,
-      10624, 10902, 21308, 21816, 21668, 8954, 6365, 10746, 22092, 22250, 10844,
-      24890
-    ],
+    "game_events": [24890],
     "hotkeys": {
-      "only_in_league": {
-        "title": "Hello From League Settings",
+      "rivals_showhide": {
+        "title": "Toggle Marvel Rivals Overlay",
         "action-type": "custom",
         "default": "Ctrl+G",
-        "game_ids": [5426]
+        "game_ids": [24890]
       }
     },
     "launch_events": [
       {
         "event": "GameLaunch",
         "event_data": {
-          "game_ids": [
-            765, 1136, 5426, 7212, 7314, 7764, 8032, 10798, 10826, 10906, 21216,
-            21566, 21570, 21626, 21634, 21640, 21848, 21854, 21864, 21960,
-            21876, 9898, 10624, 10902, 21308, 21816, 21668, 8954, 6365, 10746,
-            22092, 22250, 10844, 24890
-          ]
+          "game_ids": [24890]
         },
         "start_minimized": false
       }
